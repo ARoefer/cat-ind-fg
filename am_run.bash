@@ -1,0 +1,15 @@
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_060.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_040.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_050.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_010.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_030.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_num_050.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_num_003.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_070.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_num_020.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_num_010.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_005.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_num_015.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_theta_025.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_num_150.csv
+python quick_example.py ~/kvl_ws/observations_pris_thresh_num_100.csv
