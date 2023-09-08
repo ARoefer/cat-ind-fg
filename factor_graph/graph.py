@@ -310,7 +310,7 @@ class Graph:
         ] * len(ordered_values)
 
         new_noises_stacked = jax.tree_map(  # Flatten them before applying
-            lambda *leaves: jnp.vstack(leaves),
+            (lambda *leaves: jnp.vstack(leaves)),
             *new_noises,
         )
 
