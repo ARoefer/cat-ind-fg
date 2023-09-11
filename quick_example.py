@@ -4,7 +4,7 @@ import factor_graph
 import helpers
 import jax.numpy as jnp
 import jaxlie
-import numpy as onp
+import numpy as np
 from sample_generator import JointConnection
 from tqdm import tqdm
 from pathlib import Path
@@ -70,7 +70,12 @@ if __name__ == "__main__":
 
     # eef_poses = [get_SE3_pose(pos, ori) for pos, ori in zip(eef_pos, eef_ori)]
 
-    obs_batches = [(poses_a[:end], poses_b[:end]) for end in optimize.nonzero()[0]]
+    # Add 1 to include the marked observation and exclude it for the subsequent batch
+    batch_idcs = np.vstack((np.hstack(([0], optimize.nonzero()[0][:-1] + 1)),
+                            optimize.nonzero()[0] + 1)).T
+                           
+
+    obs_batches = [(poses_a[start:end], poses_b[start:end]) for start, end in batch_idcs]
 
     # Build the graph
     factor_graph_options = factor_graph.graph.GraphOptions(
